@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: #e4edf8;
+    min-height: 80vh;
+    text-align: center;
+}
+.intro{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: #ff0080;
+}
+.intro h1{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    height: 350px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    background-image:  url(clock.png);
+    background-size: cover;
+    border-radius: 50%;
+    cursor: help;
+    box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    transition: transform .5s;
+}
+.clock:hover{
+    transform: scale(1.1);
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: gray;
+    border-radius: 50%;
+    z-index: 100000;
+}
+.hour,
+.min,
+.sec{
+    position: absolute;
+}
+.hour, .hr{
+    width: 160px;
+    height: 160px;
+}
+.min, .mn{
+    width: 190px;
+    height: 190px;
+}
+.sec, .sc{
+    width: 230px;
+    height: 230px;
+}
+.hr,.mn,.sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: gray;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.mn::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background-color: #25f896;
+    z-index: 11;
+    border-radius: 10px 10px 0 0;
+}
+.sc::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 155px;
+    background-color: rgb(255, 10, 10);
+    z-index: 12;
+    border-radius: 20px 20px 0 0;
+}
+/* Clock Design End*?
+/* For Conatact */
+.contact{
+    margin-top: 50px;
+}
+.contact h3, h4{
+    margin: 20px;
+    font-weight: 900;
+    font-size: 20px;
+    color: #ff0080;
+    text-transform: uppercase;
+}
+.contact a{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #ff0080;
+    transition: .5s;
+}
+.contact a:hover{
+    background: #25f896;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 20px;
+}
+/*Contact Design End*/
+::selection{
+    background: #25f896;
+    color: #fff;
+}
